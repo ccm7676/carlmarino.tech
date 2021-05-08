@@ -1,0 +1,22 @@
+body {
+  background-color: #1f2751;
+}
+
+
+.code-btn {
+  position: absolute;
+  top: 315px;
+}
+
+.music-btn{
+    position: absolute;
+    top: 658;
+}
+
+.photo-btn{
+    position: absolute;
+    top: 159;
+}
+svg {
+  position: relative;
+}
