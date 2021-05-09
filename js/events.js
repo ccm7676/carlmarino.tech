@@ -2,42 +2,50 @@ const headerText = document.querySelector(".header-text");
 const codeBtn = document.querySelector(".code-btn");
 const musicBtn = document.querySelector(".music-btn");
 const photoBtn = document.querySelector(".photo-btn");
+const aboutBtn = document.querySelector(".about-btn");
 
-
-//hover events
+//on hover
 codeBtn.addEventListener("mouseenter", () => {
   headerText.innerText = "Code";
 });
+musicBtn.addEventListener("mouseenter", () => {
+  headerText.innerText = "Music";
+});
+photoBtn.addEventListener("mouseenter", () => {
+  headerText.innerText = "Photo & Video";
+});
 
+//on leave
 codeBtn.addEventListener("mouseleave", () => {
   setTimeout(() => {
     headerText.innerText = "Hover over an electron";
   }, 1000);
 });
-
-musicBtn.addEventListener("mouseenter", () => {
-  headerText.innerText = "Music";
-});
-
 musicBtn.addEventListener("mouseleave", () => {
   setTimeout(() => {
     headerText.innerText = "Hover over an electron";
   }, 1000);
 });
-
-photoBtn.addEventListener("mouseenter", () => {
-  headerText.innerText = "Photo & Video";
-});
-
 photoBtn.addEventListener("mouseleave", () => {
   setTimeout(() => {
     headerText.innerText = "Hover over an electron";
   }, 1000);
 });
 
-
 //click events
 
-photoBtn.addEventListener("click", () => {
+aboutBtn.addEventListener("click", () => {
+  window.location.href = "#about";
+})
 
+codeBtn.addEventListener("click", () => {
+  window.location.href = "#code";
+})
+
+musicBtn.addEventListener("click", () => {
+  window.location.href = "#music";
+})
+
+photoBtn.addEventListener("click", () => {
+  window.location.href = "#photo";
 })
