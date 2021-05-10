@@ -1,5 +1,5 @@
 var path = anime.path("svg .code-path");
-var electronSpeed = 6000;
+var electronSpeed = 8000;
 
 anime({
   targets: "svg .code-btn",
