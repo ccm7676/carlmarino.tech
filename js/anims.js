@@ -1,7 +1,7 @@
 var path = anime.path("svg .code-path");
 var electronSpeed = 8000;
 
-anime({
+var codeBtnAnim = anime({
   targets: "svg .code-btn",
   translateX: path("x"),
   translateY: path("y"),
@@ -11,8 +11,8 @@ anime({
 });
 
 var path = anime.path("svg .music-path");
-console.log(path());
-anime({
+
+var musicBtnAnim = anime({
   targets: "svg .music-btn",
   translateX: path("x"),
   translateY: path("y"),
@@ -23,7 +23,7 @@ anime({
 
 var path = anime.path("svg .photo-path");
 
-anime({
+var photoBtnAnim = anime({
   targets: "svg .photo-btn",
   translateX: path("x"),
   translateY: path("y"),
@@ -31,3 +31,5 @@ anime({
   duration: electronSpeed,
   loop: true,
 });
+
+module.exports = {codeBtnAnim, musicBtnAnim,photoBtnAnim};

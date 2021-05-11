@@ -22,22 +22,29 @@ body {
   color: #ffffff;
 }
 
+.about-btn{
+  cursor: pointer;
+}
+
 .code-btn {
   cursor: pointer;
   position: absolute;
   top: 315px;
+  r: 40;
 }
 
 .music-btn {
   cursor: pointer;
   position: absolute;
   top: 658;
+  r: 40;
 }
 
 .photo-btn {
   cursor: pointer;
   position: absolute;
   top: 159;
+  r: 40;
 }
 svg {
   position: absolute;
@@ -46,6 +53,6 @@ svg {
   transform: translate(-50%, -50%);
   width: 60vh;
   height: 60vh;
-  max-width: 100%;
+max-width: 100%;
 }
 
