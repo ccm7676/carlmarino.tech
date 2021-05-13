@@ -1,70 +1,67 @@
+
+
 const headerText = document.querySelector(".header-text");
-const codeBtn = document.querySelector(".code-btn");
+
 const musicBtn = document.querySelector(".music-btn");
 const photoBtn = document.querySelector(".photo-btn");
 const aboutBtn = document.querySelector(".about-btn");
-const {codeBtnAnim, musicBtnAnim,photoBtnAnim} = require("./anims.js");
 
-//on hover
+// create custom events
+
+electronEnter = new CustomEvent("electronEnter");
+electronLeave = new CustomEvent("electronLeave");
+
+// detect when mouse starts to hover over one of the electrons
+
 codeBtn.addEventListener("mouseenter", () => {
   headerText.innerText = "Code";
-  codeBtnAnim.pause();
-  musicBtnAnim.pause();
-  photoBtnAnim.pause();  
+  codeBtn.dispatchEvent(electronEnter);
 });
 musicBtn.addEventListener("mouseenter", () => {
   headerText.innerText = "Music";
-  codeBtnAnim.pause();
-  musicBtnAnim.pause();
-  photoBtnAnim.pause(); 
+  codeBtn.dispatchEvent(electronEnter);
 });
 photoBtn.addEventListener("mouseenter", () => {
   headerText.innerText = "Photo & Video";
-  codeBtnAnim.pause();
-  musicBtnAnim.pause();
-  photoBtnAnim.pause(); 
+  codeBtn.dispatchEvent(electronEnter);
 });
 
-//on leave
+// detect when mouse stops to hover over one of the electrons
+
 codeBtn.addEventListener("mouseleave", () => {
-  codeBtnAnim.play();
-  musicBtnAnim.play();
-  photoBtnAnim.play(); 
-  setTimeout(() => {
-    headerText.innerText = "Hover over an electron";
-  }, 1000);
+  codeBtn.dispatchEvent(electronLeave);
 });
 musicBtn.addEventListener("mouseleave", () => {
-  codeBtnAnim.play();
-  musicBtnAnim.play();
-  photoBtnAnim.play(); 
-  setTimeout(() => {
-    headerText.innerText = "Hover over an electron";
-  }, 1000);
+  codeBtn.dispatchEvent(electronLeave);
 });
 photoBtn.addEventListener("mouseleave", () => {
-  codeBtnAnim.play();
-  musicBtnAnim.play();
-  photoBtnAnim.play(); 
-  setTimeout(() => {
-    headerText.innerText = "Hover over an electron";
-  }, 1000);
+  codeBtn.dispatchEvent(electronLeave);
 });
 
-//click events
+// detect when electron is clicked
 
 aboutBtn.addEventListener("click", () => {
   window.location.href = "#about";
-})
+});
 
 codeBtn.addEventListener("click", () => {
   window.location.href = "#code";
-})
+});
 
 musicBtn.addEventListener("click", () => {
   window.location.href = "#music";
-})
+});
 
 photoBtn.addEventListener("click", () => {
   window.location.href = "#photo";
+});
+
+
+
+
+
+// detects when the mouse stops to hover over any of the electrons
+
+codeBtn.addEventListener("electronLeave", () => {
+  headerText.innerText = "Hover over an electron";
 })

@@ -1,5 +1,10 @@
-var path = anime.path("svg .code-path");
+const codeBtn = document.querySelector(".code-btn");
+
+//time it takes for an electron to do a full loop in milliseconds
 var electronSpeed = 8000;
+
+//anim for code electron
+var path = anime.path("svg .code-path");
 
 var codeBtnAnim = anime({
   targets: "svg .code-btn",
@@ -10,6 +15,7 @@ var codeBtnAnim = anime({
   loop: true,
 });
 
+//anim for music electron
 var path = anime.path("svg .music-path");
 
 var musicBtnAnim = anime({
@@ -21,6 +27,7 @@ var musicBtnAnim = anime({
   loop: true,
 });
 
+//anim for photo electron
 var path = anime.path("svg .photo-path");
 
 var photoBtnAnim = anime({
@@ -32,4 +39,14 @@ var photoBtnAnim = anime({
   loop: true,
 });
 
-module.exports = {codeBtnAnim, musicBtnAnim,photoBtnAnim};
+codeBtn.addEventListener("electronEnter", () =>{
+  photoBtnAnim.pause();
+  musicBtnAnim.pause();
+  codeBtnAnim.pause();
+})
+
+codeBtn.addEventListener("electronLeave", () => {
+  photoBtnAnim.play();
+  musicBtnAnim.play();
+  codeBtnAnim.play();
+})

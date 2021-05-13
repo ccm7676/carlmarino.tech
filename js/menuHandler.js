@@ -4,7 +4,10 @@ const codeDiv = document.getElementById("code");
 const musicDiv = document.getElementById("music");
 const photoDiv = document.getElementById("photo");
 
+// loops the switch statement
+
 setInterval(() => {
+  //switch that extract the id from the path and checks if it equals any page otherwise it goes to home
   switch (
     window.location.href.substring(window.location.href.indexOf("#") + 1)
   ) {
