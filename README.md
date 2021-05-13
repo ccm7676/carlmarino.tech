@@ -1,1 +1,1 @@
-#[carlmarino.tech](https://www.carlmarino.tech)
+[carlmarino.tech](https://www.carlmarino.tech)
