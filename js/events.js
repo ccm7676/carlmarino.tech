@@ -8,9 +8,8 @@ const aboutBtn = document.querySelector(".about-btn");
 
 // create custom events
 
-electronEnter = new CustomEvent("electronEnter");
-electronLeave = new CustomEvent("electronLeave");
-
+const electronEnter = new CustomEvent("electronEnter");
+const electronLeave = new CustomEvent("electronLeave");
 // detect when mouse starts to hover over one of the electrons
 
 codeBtn.addEventListener("mouseenter", () => {

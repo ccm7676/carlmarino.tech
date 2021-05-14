@@ -39,14 +39,27 @@ var photoBtnAnim = anime({
   loop: true,
 });
 
+//pause electrons when the mouse starts to hover over any of the electrons
 codeBtn.addEventListener("electronEnter", () =>{
   photoBtnAnim.pause();
   musicBtnAnim.pause();
   codeBtnAnim.pause();
 })
 
+//play electrons when the mouse stops to hover over any of the electrons
 codeBtn.addEventListener("electronLeave", () => {
   photoBtnAnim.play();
   musicBtnAnim.play();
   codeBtnAnim.play();
+})
+
+
+codeBtn.addEventListener("codeMode", () => {
+  anime({
+    targets: "body",
+    backgroundColor: "#000000",
+    easing: "easeInOutQuad",
+    duration: 1000,
+
+  })
 })
