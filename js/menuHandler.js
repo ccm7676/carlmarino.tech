@@ -4,59 +4,39 @@ const codeDiv = document.getElementById("code");
 const musicDiv = document.getElementById("music");
 const photoDiv = document.getElementById("photo");
 
+const homeMode = new CustomEvent("homeMode");
 const codeMode = new CustomEvent("codeMode");
-let oldHash = window.location.hash;
+const aboutMode = new CustomEvent("aboutMode");
+const musicMode = new CustomEvent("musicMode");
+const photoMode = new CustomEvent("photoMode");
+var oldHash = window.location.hash;
 
 // loops the switch statement
 setInterval(() => {
   if (oldHash != window.location.hash) {
     oldHash = window.location.hash;
+
     // check hash
     switch (window.location.hash) {
       case "#home":
-        homeDiv.style.display = "block";
-        aboutDiv.style.display = "none";
-        codeDiv.style.display = "none";
-        musicDiv.style.display = "none";
-        photoDiv.style.display = "none";
+        codeBtn.dispatchEvent(homeMode);
         break;
-
       case "#about":
-        homeDiv.style.display = "none";
-        aboutDiv.style.display = "block";
-        codeDiv.style.display = "none";
-        musicDiv.style.display = "none";
-        photoDiv.style.display = "none";
+        codeBtn.dispatchEvent(aboutMode);
         break;
       case "#code":
         codeBtn.dispatchEvent(codeMode);
-        homeDiv.style.display = "none";
-        aboutDiv.style.display = "none";
-        codeDiv.style.display = "block";
-        musicDiv.style.display = "none";
-        photoDiv.style.display = "none";
         break;
       case "#music":
-        homeDiv.style.display = "none";
-        aboutDiv.style.display = "none";
-        codeDiv.style.display = "none";
-        musicDiv.style.display = "block";
-        photoDiv.style.display = "none";
+        codeBtn.dispatchEvent(musicMode);
         break;
       case "#photo":
-        homeDiv.style.display = "none";
-        aboutDiv.style.display = "none";
-        codeDiv.style.display = "none";
-        musicDiv.style.display = "none";
-        photoDiv.style.display = "block";
+        codeBtn.dispatchEvent(photoMode);
         break;
       default:
-        homeDiv.style.display = "block";
-        aboutDiv.style.display = "none";
-        codeDiv.style.display = "none";
-        musicDiv.style.display = "none";
-        photoDiv.style.display = "none";
+        codeBtn.dispatchEvent(homeMode);
         break;
     }
   }
 }, 100);
+

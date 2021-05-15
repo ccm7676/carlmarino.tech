@@ -1,5 +1,3 @@
-
-
 const headerText = document.querySelector(".header-text");
 
 const musicBtn = document.querySelector(".music-btn");
@@ -55,12 +53,50 @@ photoBtn.addEventListener("click", () => {
   window.location.href = "#photo";
 });
 
-
-
-
-
 // detects when the mouse stops to hover over any of the electrons
 
 codeBtn.addEventListener("electronLeave", () => {
   headerText.innerText = "Hover over an electron";
-})
+});
+
+//detect when page changes
+
+codeBtn.addEventListener("homeMode", () => {
+  homeDiv.style.display = "block";
+  aboutDiv.style.display = "none";
+  codeDiv.style.display = "none";
+  musicDiv.style.display = "none";
+  photoDiv.style.display = "none";
+});
+
+codeBtn.addEventListener("aboutMode", () => {
+  homeDiv.style.display = "none";
+  aboutDiv.style.display = "block";
+  codeDiv.style.display = "none";
+  musicDiv.style.display = "none";
+  photoDiv.style.display = "none";
+});
+
+codeBtn.addEventListener("codeMode", () => {
+  homeDiv.style.display = "none";
+  aboutDiv.style.display = "none";
+  codeDiv.style.display = "block";
+  musicDiv.style.display = "none";
+  photoDiv.style.display = "none";
+});
+
+codeBtn.addEventListener("photoMode", () => {
+  homeDiv.style.display = "none";
+  aboutDiv.style.display = "none";
+  codeDiv.style.display = "none";
+  musicDiv.style.display = "none";
+  photoDiv.style.display = "block";
+});
+
+codeBtn.addEventListener("musicMode", () => {
+  homeDiv.style.display = "none";
+  aboutDiv.style.display = "none";
+  codeDiv.style.display = "none";
+  musicDiv.style.display = "block";
+  photoDiv.style.display = "none";
+});

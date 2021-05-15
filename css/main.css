@@ -22,7 +22,7 @@ body {
   color: #ffffff;
 }
 
-.about-btn{
+.about-btn {
   cursor: pointer;
 }
 
@@ -53,6 +53,9 @@ svg {
   transform: translate(-50%, -50%);
   width: 60vh;
   height: 60vh;
-max-width: 100%;
+  max-width: 100%;
 }
 
+.boot {
+  color: #00ff00;
+}
