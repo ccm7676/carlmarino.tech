@@ -1,0 +1,216 @@
+@font-face {
+  font-family: Roboto Mono;
+  src: url(/fonts/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto Regular;
+  src: url(/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Fugaz One;
+  src: url(/fonts/FugazOne-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252b48;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20vh;
+  height: 20vh;
+  transform: translate(-50%, -50%);
+}
+
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.start-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.start-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25vh;
+  height: 25vh;
+}
+
+.hello-txt {
+  font-size: 5vh;
+  font-family: "Roboto Mono";
+  color: #ffffff;
+  text-align: center;
+  margin-top: 6vh;
+}
+
+.mainpage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.menu-container {
+  position: absolute;
+  left: -33vh;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32vh;
+  height: 90vh;
+  border-radius: 2vh;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(40px);
+}
+
+.content-container {
+  position: absolute;
+  background: radial-gradient(
+    100% 100% at 97.36% 0%,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(40px);
+  height: 90vh;
+  left: 38vh;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 3vh;
+  max-width: calc(100% - 47vh);
+}
+
+.bgcircle-blue {
+  position: absolute;
+  left: 25vh;
+  top: 70%;
+}
+
+.bgcirlce-pink {
+  position: absolute;
+  right: 0;
+  top: 2vh;
+}
+
+.pfp{
+  position: absolute;
+  left: 50%;
+  top: 6vh;
+  transform: translateX(-50%);
+  width: 20vh;
+  height: 20vh;
+}
+
+.name-text{
+  position: absolute;
+  font-family: "Roboto Regular";
+  font-size: 3vh;
+  text-align: center;
+  top: 28vh;
+  color: white;
+  width: 100%;
+}
+
+.social-blobs{
+  display: flex;
+  position: absolute;
+  top: 35vh;
+  width: 100%;
+  justify-content: space-around;
+}
+.social-blobs svg{
+  width: 6vh;
+  height: 6vh;
+  transition: 1s ease;
+}
+
+.social-blobs svg:hover circle{
+  fill-opacity: 1;
+  transition: 1s ease;
+}
+
+.donate-btn{
+  position: absolute;
+  width: 27vh;
+  height: 6vh;
+  left: 50%;
+  top: 45vh;
+  transform: translateX(-50%);
+  border-radius: 1vh;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(40px);
+}
+
+.donate-icon{
+  position: absolute;
+  left: 2vh;
+  top: 50%;
+  transform: translateY(-50%);
+  stroke-width: 0.2vh;
+  width: 4vh;
+  height: 4vh;
+}
+
+.donate-txt{
+  color: #ffffff;
+  text-align: center;
+  font-family: "Fugaz One";
+  font-size: 3vh;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 25vh;
+  top: 60vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.menu div {
+  width: 27vh;
+  height: 4.5vh;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(40px);
+  border-radius: 0.7vh;
+  transition: 1s ease;
+}
+
+.menu div h1{
+  text-align: center;
+  font-family: "Roboto Regular";
+  font-size: 2.5vh;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  transition: 1s ease;
+}
+.menu div:hover, .menu div:hover h1{
+  background-color: #ffffff;
+  color: #000000;
+  transition: 1s ease;
+}
