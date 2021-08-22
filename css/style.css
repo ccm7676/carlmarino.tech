@@ -178,6 +178,24 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.menu-collapse-btn{
+  display: none;
+  position: absolute;
+  right: -2.5vh;
+  top: 50%;
+  width: 5vh;
+  height: 5vh;
+  transform: translateY(-50%);
+  transition: 0.5s ease;
+}
+
+.menu-collapse-btn:hover{
+  width: 5.5vh;
+  height: 5.5vh;
+  transition: 0.5s ease;
+}
+
 .menu{
   display: flex;
   position: absolute;
@@ -224,3 +242,8 @@ body {
 
 }
 
+@media only screen and (max-device-width: 1000px) {
+    .menu-collapse-btn{
+      display: block;
+    }
+}

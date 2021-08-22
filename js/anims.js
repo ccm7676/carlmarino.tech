@@ -111,3 +111,19 @@ function SwitchPage(){
         duration: 200
     })
 }
+
+function hideMenu(){
+     anime.timeline({
+        easing: 'easeInOutSine',
+        duration: 1000
+    })
+    .add({
+            targets: '.menu-container',
+            left: '-32vh',
+        })
+    .add({
+        target: 'menu-collapse-btn',
+        rotate: "180deg"
+    })
+
+}

@@ -1,6 +1,7 @@
 const startBtn = document.querySelector(".start-btn");
 const mainPage = document.querySelector(".mainpage");
 const menuBtns = document.querySelectorAll(".btn");
+const collapseBtn = document.querySelector(".menu-collapse-btn");
 
 
 startBtn.addEventListener("click", () => {
@@ -14,3 +15,7 @@ menuBtns.forEach((btn) => {
     CheckHash();
 });
 });
+
+collapseBtn.addEventListener("click", () => {
+  hideMenu();
+})
