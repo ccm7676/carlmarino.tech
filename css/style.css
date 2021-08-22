@@ -21,6 +21,7 @@
 
 body {
   background-color: #252b48;
+  overflow: none;
 }
 
 .logo {
@@ -189,6 +190,12 @@ body {
 
 }
 
+.menu div.active,.menu div.active h1{
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
 .menu div {
   width: 27vh;
   height: 4.5vh;
@@ -208,9 +215,12 @@ body {
   transform: translateY(-50%);
   width: 100%;
   transition: 1s ease;
+  cursor: default;
 }
 .menu div:hover, .menu div:hover h1{
   background-color: #ffffff;
   color: #000000;
   transition: 1s ease;
+
 }
+

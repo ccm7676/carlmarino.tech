@@ -12,6 +12,8 @@ var t2 = anime.timeline({
     easing: 'easeInOutSine',
     duration: 1500
 })
+
+
 //start sequence 
 
 t1
@@ -79,4 +81,33 @@ function LoadMainPage() {
             duration: 200,
         })
         
+}
+
+function SwitchPage(){
+    anime.timeline({
+        easing: 'easeInOutSine',
+        duration: 1000
+    })
+    .add({
+        targets: '.content-container',
+        top: '-100%',
+        opacity: 0,
+        duration: 200
+    })
+    .add({
+        targets: '.content-container',
+        top: '200%',
+        duration: 200
+    })
+    .add({
+        targets: '.content-container',
+        opacity: 1,
+        duration: 200
+
+    })
+    .add({
+        targets: '.content-container',
+        top: '50%',
+        duration: 200
+    })
 }
