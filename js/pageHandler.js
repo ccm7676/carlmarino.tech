@@ -9,6 +9,7 @@ function SetActive(btn) {
   music.classList.remove("active");
   photo.classList.remove("active");
   btn.classList.add("active");
+  document.querySelector("title").innerHTML = btn.id.charAt(0).toUpperCase() + btn.id.slice(1) + " - Carl Marino";
 }
 
 function CheckHash() {
