@@ -179,23 +179,42 @@ body {
   transform: translateY(-50%);
 }
 
-.menu-collapse-btn{
-  display: none;
+.hide-menu-btn{
   position: absolute;
-  right: -2.5vh;
+  top: 2vh;
+  right: 2vh;
+  width:3vh;
+  height: 3vh;
+  transition: 0.2s ease;
+}
+
+.hide-menu-btn:hover{
+  width: 3.3vh;
+  height: 3.3vh;
+  transition: 0.5s ease;
+}
+
+.hamburger-container{
+  position: absolute;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 10000vh;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(40px);
+  top: 5vh;
+  left: 3vh;
+  z-index: 100;
+  opacity: 0;
+}
+
+.hamburger{
+  position: absolute;
   top: 50%;
-  width: 5vh;
-  height: 5vh;
-  transform: translateY(-50%);
-  transition: 0.5s ease;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 3vh;
+  height: 3vh;
 }
-
-.menu-collapse-btn:hover{
-  width: 5.5vh;
-  height: 5.5vh;
-  transition: 0.5s ease;
-}
-
 .menu{
   display: flex;
   position: absolute;
