@@ -74,12 +74,12 @@ function LoadMainPage() {
     })
     .add({
       targets: ".menu-container",
-      left: "3vh",
+      left: function(){if(window.innerWidth > 1000){return "3vh";}else{return "-32vh"}},
       duration: 500,
     })
     .add({
       targets: ".content-container",
-      width: function() {if(window.innerWidth >= 1000){return window.outerWidth - (window.outerHeight / 100) * 47;}else{return "100%";}},
+      width: function() {if(window.innerWidth > 1000){return window.outerWidth - (window.outerHeight / 100) * 47;}else{return "100%";}},
       duration: 200,
     });
 }

@@ -111,7 +111,7 @@ body {
   top: 2vh;
 }
 
-.pfp{
+.pfp {
   position: absolute;
   left: 50%;
   top: 6vh;
@@ -120,7 +120,7 @@ body {
   height: 20vh;
 }
 
-.name-text{
+.name-text {
   position: absolute;
   font-family: "Roboto Regular";
   font-size: 3vh;
@@ -130,25 +130,25 @@ body {
   width: 100%;
 }
 
-.social-blobs{
+.social-blobs {
   display: flex;
   position: absolute;
   top: 35vh;
   width: 100%;
   justify-content: space-around;
 }
-.social-blobs svg{
+.social-blobs svg {
   width: 6vh;
   height: 6vh;
   transition: 1s ease;
 }
 
-.social-blobs svg:hover circle{
+.social-blobs svg:hover circle {
   fill-opacity: 1;
   transition: 1s ease;
 }
 
-.donate-btn{
+.donate-btn {
   position: absolute;
   width: 27vh;
   height: 6vh;
@@ -156,11 +156,11 @@ body {
   top: 45vh;
   transform: translateX(-50%);
   border-radius: 1vh;
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
 }
 
-.donate-icon{
+.donate-icon {
   position: absolute;
   left: 2vh;
   top: 50%;
@@ -170,7 +170,7 @@ body {
   height: 4vh;
 }
 
-.donate-txt{
+.donate-txt {
   color: #ffffff;
   text-align: center;
   font-family: "Fugaz One";
@@ -181,23 +181,23 @@ body {
   transform: translateY(-50%);
 }
 
-.hide-menu-btn{
+.hide-menu-btn {
   display: none;
   position: absolute;
   top: 2vh;
   right: 2vh;
-  width:3vh;
+  width: 3vh;
   height: 3vh;
   transition: 0.2s ease;
 }
 
-.hide-menu-btn:hover{
+.hide-menu-btn:hover {
   width: 3.3vh;
   height: 3.3vh;
   transition: 0.5s ease;
 }
 
-.hamburger-container{
+.hamburger-container {
   display: none;
   position: absolute;
   width: 6vh;
@@ -211,15 +211,15 @@ body {
   opacity: 0;
 }
 
-.hamburger{
+.hamburger {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 3vh;
   height: 3vh;
 }
-.menu{
+.menu {
   display: flex;
   position: absolute;
   width: 100%;
@@ -228,25 +228,24 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
 }
 
-.menu div.active,.menu div.active h1{
+.menu div.active,
+.menu div.active h1 {
   background-color: #ffffff;
   color: #000000;
 }
 
-
 .menu div {
   width: 27vh;
   height: 4.5vh;
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
   border-radius: 0.7vh;
   transition: 1s ease;
 }
 
-.menu div h1{
+.menu div h1 {
   text-align: center;
   font-family: "Roboto Regular";
   font-size: 2.5vh;
@@ -258,29 +257,31 @@ body {
   transition: 1s ease;
   cursor: default;
 }
-.menu div:hover, .menu div:hover h1{
+.menu div:hover,
+.menu div:hover h1 {
   background-color: #ffffff;
   color: #000000;
   transition: 1s ease;
-
 }
 
 @media only screen and (max-device-width: 1000px) {
-    .hide-menu-btn{
-      display: block;
-    }
-    .hamburger-container{
-      display: block;
-    }
-    .content-container{
-      position: absolute;
-      top: 50%;
-      left: 3vh;
-      right: 3vh !important;
-      transform: translateY(-50%);
-      width: calc(100% - 6vh) !important;
-      height: 90vh;
-      max-width: 100%;
-      z-index: 0;
-    }
+  .hide-menu-btn {
+    display: block;
+  }
+  .hamburger-container {
+    display: block;
+    opacity: 1;
+  }
+
+  .content-container {
+    position: absolute;
+    top: 50%;
+    left: 3vh;
+    right: 3vh !important;
+    transform: translateY(-50%);
+    width: calc(100% - 6vh) !important;
+    height: 90vh;
+    max-width: 100%;
+    z-index: 0;
+  }
 }
