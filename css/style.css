@@ -286,7 +286,7 @@ body {
   }
 }
 
-@media only screen and (max-device-width: 400px) {
+@media only screen and (max-device-width: 450px) {
   .menu-container{
     width: 100% !important;
     left: 0 !important;
