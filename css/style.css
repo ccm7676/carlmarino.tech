@@ -293,7 +293,7 @@ body {
     top:unset;
     transform: unset;
     bottom: 0;
-
+    border-radius: 4vh;
   }
   .menu div{
     width: 90%;

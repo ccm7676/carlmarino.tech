@@ -8,6 +8,7 @@ startBtn.addEventListener("click", () => {
   mainPage.style.display = "block";
   startBtn.parentElement.style.display = "none";
   LoadMainPage();
+  setInterval(Checker, 100);
 });
 
 menuBtns.forEach((btn) => {
@@ -15,7 +16,6 @@ menuBtns.forEach((btn) => {
     SwitchPage();
     window.location.hash = btn.id;
     CheckHash();
-    setInterval(Checker, 100);
   });
 });
 

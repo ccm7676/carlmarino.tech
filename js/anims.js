@@ -148,6 +148,29 @@ function hideMenu() {
     });
 }
 
+function hideMenuMobile() {
+   anime
+    .timeline({
+      easing: "easeInOutSine",
+      duration: 1000,
+    })
+    .add({
+      targets: ".menu-container",
+      bottom: "-84vh",
+      duration: 200,
+    })
+    .add({
+      targets: ".hamburger-container",
+      opacity: 1,
+    })
+    .add({
+      targets: "body",
+      update: function () {
+        hiding = false;
+      },
+    });
+}
+
 function showMenu() {
   anime
     .timeline({
