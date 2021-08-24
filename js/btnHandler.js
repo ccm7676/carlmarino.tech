@@ -5,8 +5,8 @@ const hideMenuBtn = document.querySelector(".hide-menu-btn");
 const hamburgerContainer = document.querySelector(".hamburger-container");
 const menuContainer = document.querySelector(".menu-container");
 
-var start = 0;
-var change = 0;
+var start = null;
+var change = null;
 
 startBtn.addEventListener("click", () => {
   mainPage.style.display = "block";
@@ -24,36 +24,35 @@ menuBtns.forEach((btn) => {
 });
 
 hideMenuBtn.addEventListener("click", () => {
-  if(window.innerWidth <= 450){
+  if (window.innerWidth <= 450) {
     hideMenuMobile();
-  }
-  else{
+  } else {
     hideMenu();
   }
-  
 });
-
-
 
 hamburgerContainer.addEventListener("click", () => {
   showMenu();
 });
 
-
-menuContainer.ontouchstart = (event) => {
-  console.log("he")
-  event = event || window.event;
-  event.preventDefault();
+document.ontouchstart = (event) => {
   start = event.touches[0].clientY;
-  document.ontouchstop = () => {document.ontouchstop = null;document.ontouchmove = null;};
-  document.ontouchmove = (event) => {
-    console.log("point")
-    event = event || window.event;
-    event.preventDefault();
-    change = start - event.touches[0].clientY;
-    menuContainer.style.bottom = (((window.innerHeight - menuContainer.offsetTop)- window.innerHeight/100*90) + change).toString() + "px"; 
-  }
 }
+
+document.ontouchmove = (event) => {
+  if (!start) {
+    return;
+  }
+  change = start - event.touches[0].clientY;
+
+  if (change > 0) {
+    showMenuMobile();
+  } else {
+    hideMenuMobile();
+  }
+
+  change = null;
+};
 
 var hiding = false;
 var showing = false;

@@ -160,15 +160,20 @@ function hideMenuMobile() {
       duration: 200,
     })
     .add({
-      targets: ".hamburger-container",
-      opacity: 1,
-    })
-    .add({
       targets: "body",
       update: function () {
         hiding = false;
       },
     });
+}
+
+function showMenuMobile() {
+  anime({
+    targets: ".menu-container",
+    bottom: 0,
+    duration: 200,
+
+  })
 }
 
 function showMenu() {
