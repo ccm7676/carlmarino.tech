@@ -81,7 +81,7 @@ function LoadMainPage() {
           return "-32vh";
         }
       },
-      duration: 500,
+      duration: 200,
     })
     .add({
       targets: ".content-container",

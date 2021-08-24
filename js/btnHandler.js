@@ -15,6 +15,7 @@ menuBtns.forEach((btn) => {
     SwitchPage();
     window.location.hash = btn.id;
     CheckHash();
+    setInterval(Checker, 100);
   });
 });
 
@@ -26,7 +27,6 @@ hamburgerContainer.addEventListener("click", () => {
   showMenu();
 });
 
-setInterval(Checker, 100);
 
 var hiding = false;
 var showing = false;
