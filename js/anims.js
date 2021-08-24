@@ -93,7 +93,12 @@ function LoadMainPage() {
         }
       },
       duration: 200,
-    });
+    })
+    .add({ 
+      targets: "body",
+      update: function () {setInterval(Checker, 100);}
+    
+    })
 }
 
 function SwitchPage() {

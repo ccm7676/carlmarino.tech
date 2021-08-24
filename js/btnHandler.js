@@ -12,7 +12,7 @@ startBtn.addEventListener("click", () => {
   mainPage.style.display = "block";
   startBtn.parentElement.style.display = "none";
   LoadMainPage();
-  setInterval(Checker, 100);
+  
 });
 
 menuBtns.forEach((btn) => {
