@@ -40,17 +40,17 @@ hamburgerContainer.addEventListener("click", () => {
 });
 
 
-menuContainer.onpointerdown = (event) => {
+menuContainer.ontouchstart = (event) => {
   console.log("he")
   event = event || window.event;
   event.preventDefault();
-  start = event.clientY;
-  document.onpointerup = () => {document.onpointerup = null;document.onpointermove = null;};
-  document.onpointermove = (event) => {
+  start = event.touches[0].clientY;
+  document.ontouchstop = () => {document.ontouchstop = null;document.ontouchmove = null;};
+  document.ontouchmove = (event) => {
     console.log("point")
     event = event || window.event;
     event.preventDefault();
-    change = start - event.clientY;
+    change = start - event.touches[0].clientY;
     menuContainer.style.bottom = (((window.innerHeight - menuContainer.offsetTop)- window.innerHeight/100*90) + change).toString() + "px"; 
   }
 }
