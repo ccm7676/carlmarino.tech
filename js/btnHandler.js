@@ -20,7 +20,13 @@ menuBtns.forEach((btn) => {
 });
 
 hideMenuBtn.addEventListener("click", () => {
-  hideMenu();
+  if(window.innerWidth <= 400){
+    hideMenuMobile();
+  }
+  else{
+    hideMenu();
+  }
+  
 });
 
 hamburgerContainer.addEventListener("click", () => {
