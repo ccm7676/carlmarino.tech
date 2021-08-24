@@ -33,21 +33,25 @@ hideMenuBtn.addEventListener("click", () => {
   
 });
 
+
+
 hamburgerContainer.addEventListener("click", () => {
   showMenu();
 });
 
-menuContainer.onmousedown = (event) => {
+
+menuContainer.onpointerdown = (event) => {
   console.log("he")
   event = event || window.event;
   event.preventDefault();
   start = event.clientY;
-  document.onmouseup = () => {document.onmouseup = null;document.onmousemove = null;};
-  document.onmousemove = (event) => {
+  document.onpointerup = () => {document.onpointerup = null;document.onpointermove = null;};
+  document.onpointermove = (event) => {
+    console.log("point")
     event = event || window.event;
     event.preventDefault();
-    change = event.clientY - start;
-    menuContainer.style.height = ((window.innerHeight - menuContainer.offsetTop)*100/window.innerHeight).toString() + "vh"; 
+    change = start - event.clientY;
+    menuContainer.style.bottom = (((window.innerHeight - menuContainer.offsetTop)- window.innerHeight/100*90) + change).toString() + "px"; 
   }
 }
 
