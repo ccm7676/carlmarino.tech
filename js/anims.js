@@ -57,7 +57,7 @@ function LoadMainPage() {
   t2.add({
     targets: ".start-menu",
     opacity: "0%",
-   
+
     duration: 200,
   })
     .add({
@@ -74,12 +74,24 @@ function LoadMainPage() {
     })
     .add({
       targets: ".menu-container",
-      left: function(){if(window.innerWidth > 1000){return "3vh";}else{return "-32vh"}},
+      left: function () {
+        if (window.innerWidth > 1000) {
+          return "3vh";
+        } else {
+          return "-32vh";
+        }
+      },
       duration: 500,
     })
     .add({
       targets: ".content-container",
-      width: function() {if(window.innerWidth > 1000){return window.outerWidth - (window.outerHeight / 100) * 47;}else{return "100%";}},
+      width: function () {
+        if (window.innerWidth > 1000) {
+          return window.outerWidth - (window.outerHeight / 100) * 47;
+        } else {
+          return "100%";
+        }
+      },
       duration: 200,
     });
 }
@@ -127,22 +139,35 @@ function hideMenu() {
     .add({
       targets: ".hamburger-container",
       opacity: 1,
+    })
+    .add({
+      targets: "body",
+      update: function () {
+        hiding = false;
+      },
     });
 }
 
 function showMenu() {
-  anime.timeline({
-    easing: "easeInOutSine",
-    duration: 1000,
-  })
-  .add({
-    targets: ".hamburger-container",
-    opacity: 0,
-    duration: 200,
-  })
-  .add({
-    targets: ".menu-container",
-    left: "3vh",
-    duration: 200,
-  })
+  anime
+    .timeline({
+      easing: "easeInOutSine",
+      duration: 1000,
+    })
+    .add({
+      targets: ".hamburger-container",
+      opacity: 0,
+      duration: 200,
+    })
+    .add({
+      targets: ".menu-container",
+      left: "3vh",
+      duration: 200,
+    })
+    .add({
+      targets: "body",
+      update: function () {
+        showing = false;
+      },
+    });
 }
