@@ -17,11 +17,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
   background-color: #252b48;
-  overflow: none;
 }
 
 .logo {

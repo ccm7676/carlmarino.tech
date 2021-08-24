@@ -12,6 +12,7 @@ startBtn.addEventListener("click", () => {
 
 menuBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
+    SwitchPage();
     window.location.hash = btn.id;
     CheckHash();
   });
