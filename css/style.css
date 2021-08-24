@@ -285,3 +285,25 @@ body {
     z-index: 0;
   }
 }
+
+@media only screen and (max-device-width: 400px) {
+  .menu-container{
+    width: 100% !important;
+    left: 0 !important;
+    top:unset;
+    transform: unset;
+    bottom: 0;
+
+  }
+  .menu div{
+    width: 90%;
+    height: 6vh;
+  }
+  .menu{
+    height: 30vh;
+    top: 55vh;
+  }
+  .hamburger-container{
+    display: none;
+  }
+}
