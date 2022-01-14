@@ -5,10 +5,17 @@ const hideMenuBtn = document.querySelector(".hide-menu-btn");
 const hamburgerContainer = document.querySelector(".hamburger-container");
 const menuContainer = document.querySelector(".menu-container");
 const donateBtn = document.querySelector(".donate-btn");
+const learnMoreBtn = document.querySelector(".learn-more-btn");
 
 var start = null;
 var change = null;
 
+
+learnMoreBtn.addEventListener("click", ()=>{
+  SwitchPage();
+  window.location.hash = "about";
+  CheckHash();
+})
 
 donateBtn.addEventListener("click", () => {
   window.location.href = "https://www.buymeacoffee.com/ccm7676";
