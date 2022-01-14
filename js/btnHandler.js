@@ -4,22 +4,28 @@ const menuBtns = document.querySelectorAll(".btn");
 const hideMenuBtn = document.querySelector(".hide-menu-btn");
 const hamburgerContainer = document.querySelector(".hamburger-container");
 const menuContainer = document.querySelector(".menu-container");
+const donateBtn = document.querySelector(".donate-btn");
 
 var start = null;
 var change = null;
 
-startBtn.addEventListener("click", () => {
-  mainPage.style.display = "block";
-  startBtn.parentElement.style.display = "none";
-  LoadMainPage();
-  
-});
+
+donateBtn.addEventListener("click", () => {
+  window.location.href = "https://www.buymeacoffee.com/ccm7676";
+})
+
 
 menuBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    SwitchPage();
-    window.location.hash = btn.id;
-    CheckHash();
+    if(btn.id == "article"){
+      window.location.href = "https://ccm7676.medium.com"
+    }
+    else{
+      SwitchPage();
+      window.location.hash = btn.id;
+      CheckHash();
+    }
+    
   });
 });
 

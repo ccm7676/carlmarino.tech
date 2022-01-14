@@ -1,13 +1,13 @@
 const about = document.querySelector("#about");
-const code = document.querySelector("#code");
-const music = document.querySelector("#music");
-const photo = document.querySelector("#photo");
+const home = document.querySelector("#home");
+const proj = document.querySelector("#proj");
+const article = document.querySelector("#article");
 
 function SetActive(btn) {
   about.classList.remove("active");
-  code.classList.remove("active");
-  music.classList.remove("active");
-  photo.classList.remove("active");
+  home.classList.remove("active");
+  proj.classList.remove("active");
+  article.classList.remove("active");
   btn.classList.add("active");
   document.querySelector("title").innerHTML = btn.id.charAt(0).toUpperCase() + btn.id.slice(1) + " - Carl Marino";
 }
@@ -17,14 +17,14 @@ function CheckHash() {
     case "#about":
       SetActive(about);
       break;
-    case "#code":
-      SetActive(code);
+    case "#home":
+      SetActive(home);
       break;
-    case "#music":
-      SetActive(music);
+    case "#proj":
+      SetActive(proj);
       break;
-    case "#photo":
-      SetActive(photo);
+    case "#article":
+      window.location.href = "https://ccm7676.medium.com";
       break;
     default:
       SetActive(about);

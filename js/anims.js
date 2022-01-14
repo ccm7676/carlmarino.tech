@@ -16,42 +16,236 @@ var t2 = anime.timeline({
 //start sequence
 
 t1.add({
-  targets: ".logo path",
-  strokeDashoffset: [anime.setDashoffset, 0],
-  delay: function (el, i) {
-    return i * 250;
-  },
-  direction: "alternate",
-  loop: false,
+  targets: ".cmlogo",
+  opacity: 1,
+  duration: 500
+}).add({
+  targets: ".code-load .c",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".cmlogo",
+  opacity: 0,
+  duration: 200
+}).add({
+  targets: ".code-load .c",
+  left: 0,
+  duration: 5,
+}).add({
+  targets: ".code-load .o",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".code-load .d",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".code-load .e",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".nothing .this .is .just .a .pause",
+  duration: 1000,
+}).add({
+  targets: ".code-load .o",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".code-load .d",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".code-load .e",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".code-load .c",
+  left: "20vh",
+  duration: 50
+}).add({
+  targets: ".code-load .c",
+  opacity: 0,
+  duration: 200
+}).add({
+  targets: ".cmlogo",
+  opacity: 1,
+  duration: 1000
+}).add({
+  targets: ".design-load .d",
+  opacity: 1,
+  duration: 300
+}).add({
+  targets: ".cmlogo",
+  opacity: 0,
+  duration: 200
+}).add({
+  targets: ".design-load .d",
+  left: 0,
+  duration: 5,
+}).add({
+  targets: ".design-load .e",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".design-load .s",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".design-load .i",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".design-load .g",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".design-load .n",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".nothing .this .is .just .a .pause",
+  duration: 1000,
+}).add({
+  targets: ".design-load .n",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".design-load .g",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".design-load .i",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".design-load .s",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".design-load .e",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".design-load .d",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".design-load .d",
+  left: "26vh",
+  duration: 10
+}).add({
+  targets: ".design-load .d",
+  opacity: 0,
+  duration: 200
+}).add({
+  targets: ".cmlogo",
+  opacity: 1,
+  duration: 1000
+}).add({
+  targets: ".photo-load .p",
+  opacity: 1,
+  duration: 300
+}).add({
+  targets: ".cmlogo",
+  opacity: 0,
+  duration: 200
+}).add({
+  targets: ".photo-load .p",
+  left: 0,
+  duration: 5,
+}).add({
+  targets: ".photo-load .h",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".photo-load .o",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".photo-load .t",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".photo-load .o2",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".nothing .this .is .just .a .pause",
+  duration: 1000,
+}).add({
+  targets: ".photo-load .o2",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".photo-load .t",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".photo-load .o",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".photo-load .h",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".photo-load .p",
+  opacity: 0,
+  duration: 50
+}).add({
+  targets: ".photo-load .p",
+  left: "26.7vh",
+  duration: 10
+}).add({
+  targets: ".photo-load .p",
+  opacity: 0,
+  duration: 200
+}).add({
+  targets: ".cmlogo",
+  opacity: 1,
+  duration: 1000
+}).add({
+  targets: ".music-load .m",
+  opacity: 1,
+  duration: 300
+}).add({
+  targets: ".cmlogo",
+  opacity: 0,
+  duration: 200
+}).add({
+  targets: ".music-load .m",
+  left: 0,
+  duration: 5,
+}).add({
+  targets: ".music-load .u",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".music-load .s",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".music-load .i",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".music-load .c",
+  opacity: 1,
+  duration: 50
+}).add({
+  targets: ".music-load",
+  opacity: 0,
+  delay: 400,
+  duration: 1000,
+}).add({
+  targets: ".mainpage",
+  opacity: 1,
+  duration: 100,
+}).add({
+  targets: ".mainpage",
+  update: function(){LoadMainPage()},
+  duration: 50
 })
-  .add({
-    targets: ".loading",
-    update: function () {
-      loadingPageContainer.style.display = "none";
-    },
-    duration: 100,
-  })
-  .add({
-    targets: ".start-btn",
-    opacity: "100%",
-  })
-  .add({
-    targets: ".hello-txt",
-    update: function () {
-      let i = 0;
-      if (ran == false) {
-        setInterval(() => {
-          if (i > helloTxtTxt.length) {
-            return 0;
-          }
-
-          helloTxt.innerHTML += helloTxtTxt.charAt(i);
-          i++;
-        }, 40);
-        ran = true;
-      }
-    },
-  });
 
 function LoadMainPage() {
   t2.add({

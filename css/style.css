@@ -1,30 +1,28 @@
-@font-face {
-  font-family: Roboto Mono;
-  src: url(/fonts/RobotoMono-Regular.ttf);
-}
 
 @font-face {
   font-family: Roboto Regular;
   src: url(/fonts/Roboto-Regular.ttf);
 }
 
-@font-face {
-  font-family: Fugaz One;
-  src: url(/fonts/FugazOne-Regular.ttf);
-}
+
 
 * {
+  font-family: "Roboto Regular";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
+  z-index: 1;
 }
 
-body {
-  background-color: #252b48;
+body, html {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
 }
 
-.logo {
+.cmlogo {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -38,36 +36,114 @@ body {
   width: 100%;
   height: 100%;
 }
-
-.start-menu {
+.code-load{
+  display: flex;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-}
-
-.start-btn {
   position: absolute;
-  top: 50%;
+  top:50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 25vh;
-  height: 25vh;
+  height: 20vh;
+  width: 60vh;
+  transform: translate(-50%,-50%);
+  justify-content:space-between;
+}
+.code-load svg{
+  height: 20vh;
+  opacity: 0;
+  transition: 0.4s ease;
+
 }
 
-.hello-txt {
-  font-size: 5vh;
-  font-family: "Roboto Mono";
-  color: #ffffff;
-  text-align: center;
-  margin-top: 6vh;
+.code-load .c{
+  position: absolute;
+  left: 20vh;
 }
+
+.design-load{
+  display: flex;
+  position: absolute;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  height: 20vh;
+  width: 60vh;
+  transform: translate(-50%,-50%);
+  justify-content:space-between;
+  vertical-align: middle;
+}
+.design-load svg{
+  height: 20vh;
+  opacity: 0;
+  transition: 0.4s ease;
+
+}
+
+.design-load .d{
+  position: absolute;
+  left: 26vh;
+
+}
+
+.photo-load{
+  display: flex;
+  position: absolute;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  height: 20vh;
+  width: 60vh;
+  transform: translate(-50%,-50%);
+  justify-content:space-between;
+  vertical-align: middle;
+}
+
+.photo-load svg{
+  height: 20vh;
+  opacity: 0;
+  transition: 0.4s ease;
+
+}
+
+.photo-load .p{
+  position: absolute;
+  left: 26.7vh;
+}
+
+.music-load{
+  display: flex;
+  position: absolute;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  height: 20vh;
+  width: 60vh;
+  transform: translate(-50%,-50%);
+  justify-content:space-between;
+  vertical-align: middle;
+}
+
+.music-load svg{
+  height: 20vh;
+  opacity: 0;
+  transition: 0.4s ease;
+
+}
+
+.music-load .m{
+  position: absolute;
+  left: 26.7vh;
+}
+
 
 .mainpage {
   position: absolute;
   width: 100%;
   height: 100%;
-  display: none;
+  background-image: url("/imgs/bg-min.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
 }
 
 .menu-container {
@@ -80,6 +156,14 @@ body {
   border-radius: 2vh;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(40px);
+  z-index: 3;
+}
+
+.content-box{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 .content-container {
@@ -96,20 +180,9 @@ body {
   transform: translateY(-50%);
   border-radius: 3vh;
   max-width: calc(100% - 47vh);
-  z-index: 1;
+  z-index: 3;
 }
 
-.bgcircle-blue {
-  position: absolute;
-  left: 25vh;
-  top: 70%;
-}
-
-.bgcirlce-pink {
-  position: absolute;
-  right: 0;
-  top: 2vh;
-}
 
 .pfp {
   position: absolute;
@@ -140,16 +213,17 @@ body {
 .social-blobs svg {
   width: 6vh;
   height: 6vh;
-  transition: 1s ease;
+  transition: 0.4s ease;
 }
 
 .social-blobs svg:hover circle {
   fill-opacity: 1;
-  transition: 1s ease;
+  transition: 0.4s ease;
 }
 
 .donate-btn {
   position: absolute;
+  cursor: default;
   width: 27vh;
   height: 6vh;
   left: 50%;
@@ -158,6 +232,7 @@ body {
   border-radius: 1vh;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
+  transition: 0.4s ease;
 }
 
 .donate-icon {
@@ -171,16 +246,27 @@ body {
 }
 
 .donate-txt {
+  cursor: default;
   color: #ffffff;
   text-align: center;
-  font-family: "Fugaz One";
-  font-size: 3vh;
+  font-size: 2.5vh;
   position: absolute;
   width: 100%;
+  left: 2vh;
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.4s ease;
 }
 
+.donate-btn:hover .donate-txt{
+  color: #000000;
+  transition: 0.4s ease;
+}
+
+.donate-btn:hover{
+  background-color: #ffffff;
+  transition: 0.4s ease;
+}
 .hide-menu-btn {
   display: none;
   position: absolute;
@@ -188,7 +274,7 @@ body {
   right: 2vh;
   width: 3vh;
   height: 3vh;
-  transition: 0.2s ease;
+  transition: 0.4s ease;
 }
 
 .hide-menu-btn:hover {
@@ -242,7 +328,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
   border-radius: 0.7vh;
-  transition: 1s ease;
+  transition: 0.4s ease;
 }
 
 .menu div h1 {
@@ -254,14 +340,18 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  transition: 1s ease;
+  transition: 0.4s ease;
   cursor: default;
 }
-.menu div:hover,
+
 .menu div:hover h1 {
-  background-color: #ffffff;
   color: #000000;
-  transition: 1s ease;
+  transition: 0.4s ease;
+}
+
+.menu div:hover {
+  background-color: #ffffff;
+  transition: 0.4s ease;
 }
 
 @media only screen and (max-device-width: 1000px) {
@@ -282,7 +372,7 @@ body {
     width: calc(100% - 6vh) !important;
     height: 90vh;
     max-width: 100%;
-    z-index: 0;
+    z-index: 2;
   }
 }
 
