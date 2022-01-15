@@ -38,7 +38,7 @@ function CheckHash() {
       window.location.href = "https://ccm7676.medium.com";
       break;
     default:
-      SetActive(about);
+      SetActive(home);
   }
 }
 
