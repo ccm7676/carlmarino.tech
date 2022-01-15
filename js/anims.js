@@ -45,7 +45,7 @@ t1.add({
   duration: 50
 }).add({
   targets: ".nothing .this .is .just .a .pause",
-  duration: 1000,
+  duration: 500,
 }).add({
   targets: ".code-load .o",
   opacity: 0,
@@ -69,7 +69,7 @@ t1.add({
 }).add({
   targets: ".cmlogo",
   opacity: 1,
-  duration: 1000
+  duration: 500
 }).add({
   targets: ".design-load .d",
   opacity: 1,
@@ -104,7 +104,7 @@ t1.add({
   duration: 50
 }).add({
   targets: ".nothing .this .is .just .a .pause",
-  duration: 1000,
+  duration: 500,
 }).add({
   targets: ".design-load .n",
   opacity: 0,
@@ -140,7 +140,7 @@ t1.add({
 }).add({
   targets: ".cmlogo",
   opacity: 1,
-  duration: 1000
+  duration: 500
 }).add({
   targets: ".photo-load .p",
   opacity: 1,
@@ -171,7 +171,7 @@ t1.add({
   duration: 50
 }).add({
   targets: ".nothing .this .is .just .a .pause",
-  duration: 1000,
+  duration: 500,
 }).add({
   targets: ".photo-load .o2",
   opacity: 0,
@@ -203,7 +203,7 @@ t1.add({
 }).add({
   targets: ".cmlogo",
   opacity: 1,
-  duration: 1000
+  duration: 500
 }).add({
   targets: ".music-load .m",
   opacity: 1,

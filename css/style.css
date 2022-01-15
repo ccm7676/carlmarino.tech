@@ -156,8 +156,13 @@ body, html {
   border-radius: 2vh;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+
   z-index: 3;
 }
+
+
+
 
 .home h1{
   position: absolute;
@@ -232,6 +237,7 @@ body, html {
     rgba(255, 255, 255, 0.1) 100%
   );
   backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   height: 90vh;
   left: 38vh;
   top: 50%;
@@ -290,6 +296,7 @@ body, html {
   border-radius: 1vh;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   transition: 0.4s ease;
 }
 
@@ -349,6 +356,7 @@ body, html {
   border-radius: 10000vh;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   top: 5vh;
   left: 3vh;
   z-index: 100;
@@ -381,25 +389,26 @@ body, html {
 }
 
 .menu div {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  align-content: center;
   width: 27vh;
   height: 4.5vh;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   border-radius: 0.7vh;
   transition: 0.4s ease;
 }
 
 .menu div h1 {
   text-align: center;
-  font-family: "Roboto Regular";
-  font-size: 2.5vh;
-  color: #ffffff;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 100%;
-  transition: 0.4s ease;
+  font-size: 2.5vh;
   cursor: default;
+  color: #ffffff;
+  
 }
 
 .menu div:hover h1 {
