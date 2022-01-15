@@ -58,7 +58,7 @@ document.ontouchmove = (event) => {
   }
   change = start - event.touches[0].clientY;
 
-  if (change > 3) {
+  if (change > 20) {
     showMenuMobile();
   } else {
     hideMenuMobile();
