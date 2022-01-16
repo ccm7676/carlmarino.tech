@@ -13,9 +13,14 @@ const photoBtn = document.querySelector("#photo-btn");
 const codeContainer = document.querySelector(".code-container");
 const musicContainer = document.querySelector(".music-container");
 const photoContainer = document.querySelector(".photo-container");
+const playBtn = document.querySelectorAll(".play-btn");
 
 var start = null;
 var change = null;
+var song = null;
+var prevBtnId = null;
+
+paused = true;
 
 function setMiniActive(btn){
   codeBtn.classList.remove("active");
@@ -49,6 +54,23 @@ donateBtn.addEventListener("click", () => {
   window.location.href = "https://www.buymeacoffee.com/ccm7676";
 })
 
+playBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if(btn.id != prevBtnId){
+      prevBtnId = btn.id;
+      song = new Audio("/projects/" + btn.id + ".wav")
+    }
+    
+    if(paused){
+      song.play();
+      paused=false;
+    }
+    else{
+      song.pause();
+      paused=true;
+    }
+  });
+});
 
 menuBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
