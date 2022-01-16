@@ -99,7 +99,7 @@ var hiding = false;
 var showing = false;
 
 function Checker() {
-  if (window.innerWidth > 1000) {
+  if (window.innerWidth > 1200) {
     if (!showing) {
       showMenu();
       showing = true;
