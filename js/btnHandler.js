@@ -6,9 +6,37 @@ const hamburgerContainer = document.querySelector(".hamburger-container");
 const menuContainer = document.querySelector(".menu-container");
 const donateBtn = document.querySelector(".donate-btn");
 const learnMoreBtn = document.querySelector(".learn-more-btn");
+const miniMenuBtns = document.querySelectorAll(".mini-btn");
+const codeBtn = document.querySelector("#code-btn");
+const musicBtn = document.querySelector("#music-btn");
+const photoBtn = document.querySelector("#photo-btn");
+const codeContainer = document.querySelector(".code-container");
+const musicContainer = document.querySelector(".music-container");
+const photoContainer = document.querySelector(".photo-container");
 
 var start = null;
 var change = null;
+
+function setMiniActive(btn){
+  codeBtn.classList.remove("active");
+  musicBtn.classList.remove("active");
+  photoBtn.classList.remove("active");
+  btn.classList.add("active");
+
+  var selectedContainer = document.querySelector("." + btn.id.replace("-btn","") + "-container");
+  codeContainer.classList.remove("active");
+  musicContainer.classList.remove("active");
+  photoContainer.classList.remove("active");
+  selectedContainer.classList.add("active");
+  
+}
+
+miniMenuBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    setMiniActive(btn)
+  });
+});
+
 
 
 learnMoreBtn.addEventListener("click", ()=>{

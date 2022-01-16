@@ -220,6 +220,55 @@ body, html {
   background-color: #ffffff;
 }
 
+.projects .mini-menu{
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  vertical-align: middle;
+  align-items: center;
+  left: 50%;
+  top: 5vh;
+  border-radius: 1vh;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: 4vh;
+  background: rgba(197, 197, 197, 0.411);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.projects .mini-menu h1{
+  cursor: default;
+  font-size: 2.1vh;
+  color: #ffffff;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  padding-top: 0.5vh;
+  border-radius: 0.5vh;
+  padding-bottom: 0.5vh;
+  transition: 0.4s ease;
+}
+
+.projects .mini-menu h1.active, .projects .mini-menu h1:hover{
+  color: #000000;
+  background: rgba(255, 255, 255, 0.411);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  transition: 0.4s ease;
+}
+
+.projects .mini-container{
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 80vh;
+  bottom: 0;
+}
+
+.projects .mini-container.active{
+  display: block;
+}
+
 
 .content-box{
   position: absolute;
